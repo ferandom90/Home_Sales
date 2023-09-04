@@ -1,0 +1,11 @@
+The challenge provides some steps by steps to use the custom implementation at the beginning rather than the original implementation on some jupyter blocks,
+altought original implementation is highlighted and used to clear the module on LINUX distribution systems.
+
+
+The custom worked implementation was specifically used  at specific blocks to:
+
+- Create the parquet and partitions (as original pyspark library always throw an unrelated HADOOP_HOME env variable error even when variable was placed)
+- Read the csv file directly by not using the url and pyspark SparkFiles module for distributed cache (as original pyspark library always throw an unrelated HADOOP_HOME env variable error even when variable was placed)
+
+This approach was taken due to high difficulties considered for work in some jupyter blocks on the OS of Windows and MAC where hadoop
+and spark weren´t fully stable with pyspark library due to code conflicts in the python library
